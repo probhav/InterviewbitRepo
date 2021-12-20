@@ -3,7 +3,7 @@ import axios from 'axios'
 import Interview from './interview'
 import {interviews} from '../utilities/url'
 
-
+// for show
 
 const Interviews = () => {
     const url = interviews

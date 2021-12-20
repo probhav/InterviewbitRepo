@@ -6,6 +6,7 @@ router.get('/', async (req, res) => {
   try {
     const users = await User.find({});
     res.send(users);
+    console.log("Probhav garg");
   } catch (e) {
     res.send(e);
   }

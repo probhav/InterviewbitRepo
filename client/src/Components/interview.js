@@ -1,12 +1,22 @@
 import React from 'react'
+import { makeStyles } from '@material-ui/core/styles';
+//interview body
+const useStyle = makeStyles((theme) => ({
+    yoyo: {
+      flexGrow: 1,
+      padding:40 
+    },
+  }));
+
 
 const Interview = ({item}) => {
     
     const date = new Date(parseInt(item.duration.start)).toDateString()
     const start = new Date(parseInt(item.duration.start)).toLocaleTimeString('en-IN', { hour: 'numeric', hour12: true, minute: 'numeric' })
     const end = new Date(parseInt(item.duration.end)).toLocaleTimeString('en-IN', { hour: 'numeric', hour12: true, minute: 'numeric' })
+    const classes = useStyle();
     return (
-        <div>
+        <div className={classes.yoyo}>
             <span style={{fontFamily: "verdana"}}>Participants : </span>
                 {item.emails.map( (email,index) =>(<span style={{fontFamily: "verdana"}} key={index} >{email} &nbsp;&nbsp; </span> ))}
             <br/>
