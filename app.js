@@ -17,8 +17,11 @@ app.use(cors())
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
+// parses incoming requests with JSON payloads
 app.use(express.json());
+//parses incoming requests with urlencoded payloads 
 app.use(express.urlencoded({ extended: true }));
+// addding css
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
