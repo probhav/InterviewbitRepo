@@ -71,7 +71,7 @@ const Update = () => {
         setStart(new Date())
         setEnd(new Date())
         setemailstate([])
-        setActive(null)
+        setActive(item)
     }
 
     const handleSubmit = ()=>{
@@ -97,12 +97,11 @@ const Update = () => {
         });
 
     }
-
+//61b5afe25707902231eec085
     const handleDelete = ()=>{
         let formData = {
             interviewID : active._id
         }
-        console.log(formData)
         axios
         .post(deleteURL, formData)
         .then((response) => {
@@ -111,7 +110,7 @@ const Update = () => {
             setUpdated(aux)
         })
         .catch((error) => {
-          alert(error.response.data.error)
+          alert('error.response.data.error')
           console.log(error.response.data.error)
         });
 

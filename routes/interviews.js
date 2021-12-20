@@ -19,9 +19,10 @@ router.get('/', async (req, res) => {
 router.post('/delete', async (req,res)=>{
     try {
         interview = await Interview.findById(req.body.interviewID)
+        // console.log(interview)
         for( const email of interview.emails)
         {
-            const user = await User.findOne({ email })
+            const user = await User.findOne({email})
             user.interviews.splice(user.interviews.indexOf(interview._id),1)
             await user.save()
         }
