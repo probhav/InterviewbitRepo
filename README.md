@@ -1,10 +1,11 @@
 # interviewBit <br>
 Made this project as part of hiring assignment at Interviewbit(Scalar Academy) <br>
 For SDE -Internship position <br>
-1. An interview creation page where the admin can create an interview by selecting participants, start time and end time. 
+1. An interview creation page where the admin can create an interview by selecting participants, start time and end time. <br>
 Backend should throw error with proper error message if: 
 Any of the participants is not available during the scheduled time (i.e, has another interview scheduled)
-No of participants is less than 2
-2. An interviews list page where admin can see all the upcoming interviews.
-3. An interview edit page where admin can edit the created interview with the same validations as on the creation page.
-4. Option to upload resume.
+No of participants is less than 2 <br>
+2. Email notifications for the scheduled interview <br>
+3. An interviews list page where admin can see all the upcoming interviews.<br>
+4. An interview edit page where admin can edit the created interview with the same validations as on the creation page.<br>
+5. Option to upload resume.
